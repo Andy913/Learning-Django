@@ -12,6 +12,10 @@ def homepage(request):
                   template_name="main/home.html",
                   context={"tutorials": Tutorial.objects.all})
 
+def account(request):
+    return render(request=request,
+                  template_name="main/account.html")
+
 def register(request):
     if request.method == "POST":
         form=NewUserForm(request.POST)
