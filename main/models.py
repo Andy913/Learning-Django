@@ -1,6 +1,10 @@
 from django.db import models
 from datetime import datetime
 
+class TutorialCategory(models.Model):
+    tutorial_category = models.CharField(max_length=200)
+    
+
 # Create your models here.
 class Tutorial(models.Model):
     tutorial_title = models.CharField(max_length=200)
